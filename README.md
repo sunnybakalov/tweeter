@@ -1,5 +1,16 @@
 # Twitter
 
+### I am recreating Twitter using GraphQL, Elixir, React, Apollo, and Absinthe.
+
+This is a personal project where my goal is to learn how these languages & frameworks all work together seamlessly.
+
+Some goals include:
+ - Have a functional version that uses G raphQL subscriptions for real time Tweet updates.
+ - Proper authentication on the backend.
+ - Recreate Twitter's UI with React.
+
+________________________________________________________________________________________________________________________
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
