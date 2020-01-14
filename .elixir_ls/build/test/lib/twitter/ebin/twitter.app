@@ -25,6 +25,7 @@
                         'Elixir.TwitterWeb.PageView',
                         'Elixir.TwitterWeb.Router',
                         'Elixir.TwitterWeb.Router.Helpers',
+                        'Elixir.TwitterWeb.Schema.Middleware.Authenticate',
                         'Elixir.TwitterWeb.UserSocket']},
               {registered,[]},
               {vsn,"0.1.0"},
