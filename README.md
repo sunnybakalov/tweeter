@@ -1,6 +1,6 @@
 # Twitter
 
-### I am recreating Twitter using GraphQL, Elixir, React, Apollo, and Absinthe.
+### I am recreating Twitter using GraphQL, Phoenix, Elixir, React, Apollo, and Absinthe.
 
 This is a personal project where my goal is to learn how these languages & frameworks all work together seamlessly.
 
