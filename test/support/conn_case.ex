@@ -19,10 +19,15 @@ defmodule TwitterWeb.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      alias TwitterWeb.Router.Helpers, as: Routes
+      alias TwitterWeb.Router.Helpers, as: Route
 
       # The default endpoint for testing
       @endpoint TwitterWeb.Endpoint
+
+      defp auth_user(conn, user) do
+        token = TwitterWeb.AuthToken.sign(user)
+        put_req_header(conn, "authorization", "Bearer #{token}")
+      end
     end
   end
 

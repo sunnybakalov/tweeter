@@ -20,7 +20,7 @@ defmodule Twitter.Accounts do
     user = Repo.get_by(User, username: username)
 
     with %{password_hash: password_hash} <- user,
-      true <- Pbkdf2.verify_pass(password, password_hash) do
+         true <- Pbkdf2.verify_pass(password, password_hash) do
       {:ok, user}
     else
       _ -> :error
