@@ -1,21 +1,21 @@
 defmodule TwitterWeb.Router do
-  # use TwitterWeb, :router
+  use TwitterWeb, :router
 
-  # pipeline :api do
-  #   plug :accepts, ["json"]
-  #   plug TwitterWeb.Plugs.SetCurrentUser
-  # end
+  pipeline :api do
+    plug :accepts, ["json"]
+    plug TwitterWeb.Plugs.SetCurrentUser
+  end
 
-  # scope "/" do
-  #   pipe_through :api
+  scope "/" do
+    pipe_through :api
 
-  #   forward "/api", Absinthe.Plug,
-  #     schema: TwitterWeb.Schema.Schema
+    forward "/api", Absinthe.Plug,
+      schema: TwitterWeb.Schema.Schema
 
-  #   forward "/graphiql", Absinthe.Plug.GraphiQL,
-  #     schema: TwitterWeb.Schema.Schema,
-  #     socket: TwitterWeb.UserSocket
-  # end
+    forward "/graphiql", Absinthe.Plug.GraphiQL,
+      schema: TwitterWeb.Schema.Schema,
+      socket: TwitterWeb.UserSocket
+  end
 
   # pipeline :browser do
   #   plug :accepts, ["html"]
@@ -35,7 +35,7 @@ defmodule TwitterWeb.Router do
   #   get "/", PageController, :index
   # end
 
-  # Other scopes may use custom stacks.
+  # # Other scopes may use custom stacks.
   # scope "/api", TwitterWeb do
   #   pipe_through :api
   # end
